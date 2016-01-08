@@ -1,0 +1,42 @@
+﻿@model DevDevDev.Models.SessionSubmissionViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="copy-block row">
+    <div class="large-8 columns">
+        <h4>We'd love to see you speak!</h4>
+        
+        <p>
+            Never heard of DDD? Well let me start by explaining that DDD is unique among Australian tech conferences in that anyone can submit a session and the agenda is decided by community vote.
+        </p>
+        <p>
+            The conference runs on a Saturday and last year had 350 attendees.
+        </p>
+        <p>
+            We are technology agnoistic and stive to get talks from all across the developer community, so we'd love to get your submission!
+        </p>
+        <p>
+            To submit a session please enter the following details (and please dont enter any HTML otherwise you will get an error after submission & you'll have to do it again):
+        </p>
+
+        @Html.Partial("SessionForm")
+
+    </div>
+    
+
+    <div class="large-4 columns">
+
+        @Html.Partial("ImportantDates")
+
+    </div>
+    
+</div>
+
+    <script>
+        $(document).ready(function () {
+            $("#SessionTitle").focus();
+        });
+
+    </script>

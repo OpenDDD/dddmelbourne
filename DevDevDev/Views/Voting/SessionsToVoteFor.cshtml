@@ -1,0 +1,104 @@
+﻿@model DevDevDev.Models.SubmittedSessionsViewModel
+
+
+
+
+<div id="config" 
+    data-sessions-url="@Url.Action("GetSessionsAsJson")" 
+    data-submit-votes-url="@Url.Action("SubmitVote")"
+    data-voted-successfully-url="@Url.Action("VotedSuccessfully")"
+    data-voted-failure-url="@Url.Action("VotingFailure")"
+    class="copy-block row" ng-app="ddd">
+    
+    <div class="large-12 columns">
+        <h4>Vote for Sessions</h4>
+    </div>
+    
+
+    <div class="small-12 columns" ng-controller="votingCtrl">
+    
+        <p>
+           <strong>For your convenience voting is not restricted & we dont require registration but we can still see cheaters!</strong> 
+        </p> 
+
+        <p ng-cloak>
+            Please select the {{viewModel.MaxNumberOfVotes}} sessions you most want to see and then click the Submit Votes button to submit your choices.
+        </p>
+
+        <p>
+            <label id="showFullDescriptionLabel" for="showFull">Show full description of sessions</label>  <input id="showFull" type="checkbox"  ng-model="showFull" />
+        </p>
+
+        <div class="votes-remaining row" data-magellan-expedition="fixed">
+            <div class="small-centered large-centered medium-centered columns">
+                <span ng-cloak>Votes remaining: {{viewModel.TotalVotes}}</span>
+                <button id="submit-votes" ng-disabled="areWeSubmittingVotes" ng-click="submit(viewModel.SessionsToVoteFor)" ng-cloak>{{areWeSubmittingVotes ? 'Submitting..' : 'Submit votes'}}</button>
+            </div>
+        </div>
+
+        <section ng-show="sessionsLoaded == false">
+          
+            <style>
+                @@-webkit-keyframes rotate {
+              from {
+                -webkit-transform: rotate(0deg);
+              }
+              to {
+                -webkit-transform: rotate(359deg);
+              }
+   
+            }
+            .spin-lars {
+              margin-left: 100px;
+              -webkit-animation-name: rotate;
+              -webkit-animation-duration: 0.9s;
+              -webkit-animation-iteration-count: infinite;
+              -webkit-transition-timing-function: linear;
+            }
+
+            </style>
+
+            <p>
+                Loading sessions..
+                <img src="~/Content/images/larsSmall.jpg" class="spin-lars"/>
+            </p>
+
+        </section>
+
+        <section ng-show="sessionsLoaded == true" ng-repeat="session in viewModel.SessionsToVoteFor" ng-cloak>
+
+            <div ng-class="{selected: session.VotedFor}">
+
+                <h5><a ng-click="session.ShowDescription=!session.ShowDescription" href="javascript:void(null);" title="Toggle session description">{{session.SessionTitle}}</a></h5>
+
+                <div ng-show="showFull || session.ShowDescription">
+                    <p>
+                        {{session.PresenterName}}
+
+                        <a href="http://www.twitter.com/{{session.PresenterTwitterAlias}}">{{session.PresenterTwitterAlias}}</a>
+
+                        <br />
+                        <a href="{{'http://' + session.PresenterWebsite}}">{{session.PresenterWebsite}}</a>
+
+                    </p>
+
+                    <p ng-bind-html-unsafe="session.SessionAbstract"></p>
+                </div>
+                <button ng-disabled="session.VotedFor" ng-click="vote(session)">Vote</button>
+                <button ng-disabled="!session.VotedFor" ng-click="unvote(session)">Cancel Vote</button>
+
+                <hr />
+            </div>
+
+        </section>
+
+    </div>
+    
+</div>
+
+@section optionalScripts
+{
+    @Scripts.Render("~/bundles/angular")
+  
+    <script src="~/Scripts/app/votingCtrl.js"></script>
+}

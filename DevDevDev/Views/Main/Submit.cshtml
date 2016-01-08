@@ -1,0 +1,49 @@
+﻿@model DevDevDev.Models.SessionSubmissionViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="copy-block row">
+    <div class="large-8 columns">
+        <h4>Submit a session</h4>
+        
+        <p>
+            We welcome sessions from any dev related topic. Previously we have had a wide range of sessions 
+            from agile to C++ to JavaScript to Iron Ruby. If voters think your session is relevant or interesting its in!
+        </p>
+        <p>
+            Before submitting a session please consider the following:
+            <ul>
+                <li>You should be comfortable giving your presentation in front of an audience of between
+                    50-150 people </li>
+                <li>The audience will be largely technical and can be quite vocal on some topics!</li>
+   
+                <li>Sessions are not a sales presentation although you are welcome to have a slide or
+                    two about yourself and your company </li>
+                <li>You will probably not have internet access </li>
+                <li>We will open voting about a month prior to the event. If your session gets voted
+                    in and you agree to present, then this is a serious commitment </li>
+                <li>Experienced presenter, Author & MVP Guy Smith Ferrier has some great advice on how
+                    to give a good presentation at: <a href="http://guysmithferrier.com/Downloads/HowToGiveGreatPresentations.pdf">guysmithferrier.com/Downloads/HowToGiveGreatPresentations.pdf</a> </li>
+
+
+            </ul>
+        </p>
+        <p>
+           To submit a session please enter the following details (and please dont enter any HTML otherwise you will get an error after submission & you'll have to do it again):
+ 
+        </p>
+
+        @Html.Partial("SessionForm")
+
+    </div>
+    
+</div>
+
+    <script>
+        $(document).ready(function () {
+            $("#SessionTitle").focus();
+        });
+
+    </script>

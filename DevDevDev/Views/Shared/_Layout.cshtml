@@ -1,0 +1,64 @@
+﻿@using DevDevDev.Models
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+    <title>DDD Melbourne - Sat 8th Aug</title>
+    
+    <link href="@Url.Content("~/Content/css/foundation.css")" rel="stylesheet">
+
+    @Styles.Render("~/bundles/css")
+  
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<script src="@Url.Content("~/scripts/vendor/custom.modernizr.js")"></script>
+	<script src="@Url.Content("~/scripts/vendor/jquery.js")"></script>
+     
+</head>
+
+    <body>
+        
+	<header>
+		<div class="bg-fill">&nbsp;</div>
+		<div class="status-row">
+			<div class="row">
+				<div class="large-12 columns">
+					Current status: <strong>Sold Out</strong>
+				</div>
+			</div>
+		</div>
+		<div class="row title">
+			<div class="large-12 columns">
+				<h1>
+				    <a href="/">DDD Melbourne</a>
+				</h1>
+				<h2>DDD Melbourne is a non profit community event run by developers, for developers & will be held on @EventConfig.EventDateDescription</h2>
+			</div>
+		</div>
+	</header>
+
+	@RenderBody()
+    
+  
+	
+    @Scripts.Render("~/bundles/libs")
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCaeVQINq47j7V0gxi_jfv3fYxr96UbTY8&sensor=false"></script>
+	
+    @Scripts.Render("~/bundles/site")
+
+   @RenderSection("optionalScripts", false)
+
+
+        <script>
+           $(document).foundation();
+        </script>
+</body>
+
+
+      
+   

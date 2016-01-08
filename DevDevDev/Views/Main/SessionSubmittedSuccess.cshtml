@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="copy-block row">
+    <div class="large-8 columns">
+        <h4>Session Submitted Successfully</h4>
+
+        <p>
+            Thank you for your submission.
+        </p>
+
+        <p>
+            Voting will take place soon with everyone informed of the outcome. Good luck!
+        </p>
+        
+        <p>
+            @Html.ActionLink("Back to home page", "Index", "Main", null, new { @class = "button" })
+        </p>
+        
+    </div>
+    
+</div>

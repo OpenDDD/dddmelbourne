@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="copy-block row">
+    <div class="large-8 columns">
+        <h4>Error submitting session</h4>
+        
+        <p>
+            Oops something went wrong please try again later.
+        </p>
+
+        <p>
+            @Html.ActionLink("Back to home page", "Index", "Main", null, new { @class = "button" })
+        </p>
+        
+         <p>
+            <img src="@Url.Content("~/content/images/lars.jpg")"/>
+        </p>
+    </div>
+    
+
+ 
+
+</div>

@@ -1,0 +1,96 @@
+﻿@model DevDevDev.Models.SessionSubmissionViewModel
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary()
+
+    <fieldset id="session-submission">
+        <ul>
+
+            <li>
+                <label for="SessionTitle">
+                    Session title:
+                </label>
+                @Html.ValidationMessageFor(m => m.SessionTitle)
+                @Html.TextBoxFor(m => m.SessionTitle)
+
+            </li>
+            <li>
+                <label for="SessionAbstract">
+                    Session abstract:
+                </label>
+                @Html.ValidationMessageFor(m => m.SessionAbstract)
+                @Html.TextAreaFor(m => m.SessionAbstract)
+
+            </li>
+            <li>
+                <label for="PresenterName">
+                    Presenter name:
+                </label>
+                @Html.ValidationMessageFor(m => m.PresenterName)
+                @Html.TextBoxFor(m => m.PresenterName)
+
+            </li>
+            <li>
+                <label for="PresenterBio">
+                    A bit about you:
+                </label>
+                @Html.ValidationMessageFor(m => m.PresenterBio)
+                @Html.TextAreaFor(m => m.PresenterBio)
+
+            </li>
+            <li>
+                <label for="PresenterMobileNumber">
+                    Mobile number:
+                </label>
+                @Html.ValidationMessageFor(m => m.PresenterMobileNumber)
+                @Html.TextBoxFor(m => m.PresenterMobileNumber)
+
+            </li>
+            <li>
+                <label for="Email">
+                    Email:
+                </label>
+
+                @Html.ValidationMessageFor(m => m.PresenterEmail)
+                @Html.TextBoxFor(m => m.PresenterEmail, new { InputType = "email" })
+
+            </li>
+            <li>
+                <label for="PresenterTwitterAlias">
+                    Twitter alias (optional):
+                </label>
+                @Html.ValidationMessageFor(m => m.PresenterTwitterAlias)
+                @Html.TextBoxFor(m => m.PresenterTwitterAlias)
+
+            </li>
+            <li>
+                <label for="PresenterWebsite">
+                    Website (optional):
+                </label>
+                @Html.ValidationMessageFor(m => m.PresenterWebsite)
+                @Html.TextBoxFor(m => m.PresenterWebsite)
+
+            </li>
+            <li>
+                <label for="RecommendedAudience">
+                    Recommended audience (any pre-req knowledge, level etc?):
+                </label>
+
+                @Html.ValidationMessageFor(m => m.RecommendedAudience)
+                @Html.TextBoxFor(m => m.RecommendedAudience)
+
+            </li>
+
+            <li>
+                @CaptchaMvc.HtmlHelpers.CaptchaHelper.Captcha(Html, "I cant read this - give me another one", "Human check - enter the numbers above", 5)
+            </li>
+
+            <li>
+                <input type="submit" class="button" value="Submit session" />
+            </li>
+        </ul>
+    </fieldset>
+
+}

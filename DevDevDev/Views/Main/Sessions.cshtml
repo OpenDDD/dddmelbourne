@@ -1,0 +1,51 @@
+﻿@using DevDevDev.Infrastructure
+@model DevDevDev.Models.SubmittedSessionsViewModel
+
+
+
+<div class="copy-block row">
+    <div class="large-12 columns">
+        <h4>Sessions</h4>
+    </div>
+    <div class="small-12 columns">
+    
+        <p>
+            Below are the sessions submitted (@Model.Sessions.Count sessions so far)
+        </p>
+        <p>
+        Note we manually approve all entries so dont worry if you have just submitted a session and it is not appearing yet:
+        </p>
+    
+        @foreach (var session in Model.Sessions)
+        {
+            
+            <h5> @session.SessionTitle</h5> 
+            <p>
+                @session.PresenterName   
+                
+                @if (!String.IsNullOrWhiteSpace(session.PresenterTwitterAlias))
+                {
+                     <a href="http://www.twitter.com/@session.PresenterTwitterAlias" target="_blank">@@@session.PresenterTwitterAlias</a>
+                }
+               
+                @if (!String.IsNullOrWhiteSpace(session.PresenterWebsite))
+                {
+                    <br/>
+                     <a href="http://@session.PresenterWebsite" target="_blank">@session.PresenterWebsite</a>
+                }
+            </p>
+            <p>
+           
+                 @Html.Raw(session.SessionAbstract)
+            </p>
+                  
+            <hr/>
+                
+        }
+
+   
+        
+
+    </div>
+    
+</div>
