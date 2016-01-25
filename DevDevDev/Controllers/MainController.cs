@@ -17,26 +17,26 @@ namespace DevDevDev.Controllers
             return View();
         }
 
-        [OutputCache(Duration = 3600)]
+        /*[OutputCache(Duration = 3600)]
         public ActionResult Sessions()
         {
             var model = _submittedSessionsService.GetSubmittedSessions();
 
             return View(model);
-        }
+        }*/
 
-        public ActionResult Agenda()
+        /*public ActionResult Agenda()
         {
             return View("Agenda");
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public ActionResult Submit()
         {
             var viewModel = new SessionSubmissionViewModel();
 
             return View(viewModel);
-        }
+        }*/
 
         [HttpGet]
         public ActionResult Yow()
@@ -46,7 +46,7 @@ namespace DevDevDev.Controllers
             return View(viewModel);
         }
 
-        [HttpPost]
+        /*[HttpPost]
         [CaptchaVerify("Captcha is not valid")]
         [Throttle(Name = "ThrottleSubmit", Message = "Request throttled", Seconds = 5)]
         public ActionResult Submit(SessionSubmissionViewModel viewModel)
@@ -63,14 +63,14 @@ namespace DevDevDev.Controllers
             }
 
             return RedirectToAction("SubmitError");
-        }
+        }*/
 
-        public ActionResult Register()
+        /*public ActionResult Register()
         {
             return new RedirectResult("https://www.eventbrite.com.au/e/ddd-melbourne-6-2015-registration-16657196122/");
-        }
+        }*/
 
-        public ActionResult SessionSubmittedSuccess()
+        /*public ActionResult SessionSubmittedSuccess()
         {
             return View();
         }
@@ -78,7 +78,7 @@ namespace DevDevDev.Controllers
         public ActionResult SubmitError()
         {
             return View();
-        }
+        }*/
 
         [HttpGet]
         public ActionResult CodeOfConduct()
