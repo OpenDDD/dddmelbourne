@@ -26,6 +26,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -222,9 +223,8 @@
     </Content>
     <Content Include="Content\images\andrew.jpg" />
     <Content Include="Content\images\brendan.jpg" />
-    <Content Include="Content\images\darrel.jpg" />
     <Content Include="Content\images\john.jpg" />
-    <Content Include="Content\images\paul.jpeg" />
+    <Content Include="Content\images\shawn.jpg" />
     <Content Include="Content\images\sponsor-buzzconf.png" />
     <Content Include="Content\images\sponsor-gooroo.png" />
     <Content Include="Content\images\sponsor-pageup.png" />
