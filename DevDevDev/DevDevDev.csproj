@@ -227,6 +227,8 @@
     <Content Include="Content\images\shawn.jpg" />
     <Content Include="Content\images\sponsor-buzzconf.png" />
     <Content Include="Content\images\sponsor-gooroo.png" />
+    <Content Include="Content\images\sponsor-microsoft.png" />
+    <Content Include="Content\images\sponsor-octopusdeploy.png" />
     <Content Include="Content\images\sponsor-pageup.png" />
     <Content Include="Content\images\sponsor-pan.png" />
     <Content Include="Content\images\sponsor-aspose.png" />
@@ -245,6 +247,7 @@
     <Content Include="Content\images\sponsor-seek.png" />
     <Content Include="Content\images\sponsor-seq.png" />
     <Content Include="Content\images\sponsor-ssw.png" />
+    <Content Include="Content\images\sponsor-telerik.png" />
     <Content Include="Content\images\sponsor-xero-large.png" />
     <Content Include="Content\images\train.png" />
     <Content Include="Content\images\tram.png" />
