@@ -19,7 +19,7 @@
     <div class="small-12 columns" ng-controller="votingCtrl">
     
         <p>
-           <strong ng-if="!validateWithEventbrite">For your convenience voting is not restricted & we dont require registration but we can still see cheaters!</strong> 
+           <strong ng-if="validateWithEventbrite === 'False'">For your convenience voting is not restricted & we dont require registration but we can still see cheaters!</strong> 
            <strong ng-if="validateWithEventbrite">In order to make this the best conference we can for ticket holders, we require you to have purchased a ticket to vote. Please enter your order number and the associated email address in the boxes below.</strong> 
         </p> 
 
@@ -43,7 +43,7 @@
                             <label for="orderNumber" class="inline">Order Number</label>
                         </div>
                         <div class="large-7 columns end">
-                            <input type="number" id="orderNumber" required ng-model="viewModel.orderNumber"/>
+                            <input type="text" id="orderNumber" required ng-model="viewModel.orderNumber"/>
                         </div>
                     </div>
                     <div class="row">

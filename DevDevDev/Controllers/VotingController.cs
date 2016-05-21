@@ -32,7 +32,7 @@ namespace DevDevDev.Controllers
 
         [Throttle(Name = "ThrottleVote", Message = "Request throttled", Seconds = 5)]
         [HttpPost]
-        public ActionResult SubmitVote(string[] sessionIds, int orderNumber = -1, string orderEmail = "")
+        public ActionResult SubmitVote(string[] sessionIds, string orderNumber = "", string orderEmail = "")
         {
             if (sessionIds.Length != EventConfig.TotalVotes)
             {
@@ -42,7 +42,7 @@ namespace DevDevDev.Controllers
             var votes = new List<Vote>();
             for (var i = 0; i < EventConfig.TotalVotes; i++)
             {
-                votes.Add(new Vote(sessionIds[i], System.Web.HttpContext.Current.Request.UserHostAddress));
+                votes.Add(new Vote(sessionIds[i], System.Web.HttpContext.Current.Request.UserHostAddress, orderNumber, orderEmail));
             }
 
             _voteService.AddVotes(votes);
