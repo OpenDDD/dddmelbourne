@@ -197,6 +197,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ExtensionMethods.cs" />
+    <Compile Include="Infrastructure\FeatureFlags.cs" />
     <Compile Include="Infrastructure\ThrottleAttribute.cs" />
     <Compile Include="Models\EventConfig.cs" />
     <Compile Include="Models\VotingSubmissionViewModel.cs" />
@@ -204,6 +205,7 @@
     <Compile Include="Models\SubmittedSessionsViewModel.cs" />
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Models\SessionSubmission.cs" />
+    <Compile Include="Services\EventbriteService.cs" />
     <Compile Include="Services\SubmittedSessionsService.cs" />
     <Compile Include="Services\SessionSubmissionService.cs" />
     <Compile Include="Models\SessionSubmissionViewModel.cs" />
