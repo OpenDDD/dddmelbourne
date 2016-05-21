@@ -19,7 +19,8 @@
     <div class="small-12 columns" ng-controller="votingCtrl">
     
         <p>
-           <strong>For your convenience voting is not restricted & we dont require registration but we can still see cheaters!</strong> 
+           <strong ng-if="!validateWithEventbrite">For your convenience voting is not restricted & we dont require registration but we can still see cheaters!</strong> 
+           <strong ng-if="validateWithEventbrite">In order to make this the best conference we can for ticket holders, we require you to have purchased a ticket to vote. Please enter your order number and the associated email address in the boxes below.</strong> 
         </p> 
 
         <p ng-cloak>
@@ -32,8 +33,29 @@
 
         <div class="votes-remaining row" data-magellan-expedition="fixed">
             <div class="small-centered large-centered medium-centered columns">
-                <span ng-cloak>Votes remaining: {{viewModel.TotalVotes}}</span>
-                <button id="submit-votes" ng-disabled="areWeSubmittingVotes" ng-click="submit(viewModel.SessionsToVoteFor)" ng-cloak>{{areWeSubmittingVotes ? 'Submitting..' : 'Submit votes'}}</button>
+                <div class="row">
+                    <span class="large-12" ng-cloak>Votes remaining: {{viewModel.TotalVotes}}</span>
+                </div>
+                <br/>
+                <div ng-if="validateWithEventbrite">
+                    <div class="row">
+                        <div class="large-offset-1 large-2 columns">
+                            <label for="orderNumber" class="inline">Order Number</label>
+                        </div>
+                        <div class="large-7 columns end">
+                            <input type="number" id="orderNumber" required ng-model="viewModel.orderNumber"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-offset-1 large-2 columns">
+                            <label for="orderEmail" class="inline">Order Email</label>
+                        </div>
+                        <div class="large-7 columns end">
+                            <input type="email" id="orderEmail" required ng-model="viewModel.orderEmail"/>
+                        </div>
+                    </div>
+                </div>
+                        <button id="submit-votes" ng-disabled="areWeSubmittingVotes" ng-click="submit(viewModel.SessionsToVoteFor, viewModel.orderNumber, viewModel.orderEmail)" ng-cloak>{{areWeSubmittingVotes ? 'Submitting..' : 'Submit votes'}}</button>
             </div>
         </div>
 

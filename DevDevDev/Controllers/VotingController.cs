@@ -32,7 +32,7 @@ namespace DevDevDev.Controllers
 
         [Throttle(Name = "ThrottleVote", Message = "Request throttled", Seconds = 5)]
         [HttpPost]
-        public ActionResult SubmitVote(string[] sessionIds)
+        public ActionResult SubmitVote(string[] sessionIds, int orderNumber = -1, string orderEmail = "")
         {
             if (sessionIds.Length != EventConfig.TotalVotes)
             {
