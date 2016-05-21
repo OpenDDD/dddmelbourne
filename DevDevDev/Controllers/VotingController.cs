@@ -12,6 +12,7 @@ namespace DevDevDev.Controllers
         private readonly VoteService _voteService = new VoteService();
         private readonly SubmittedSessionsService _submittedSessionsService = new SubmittedSessionsService();
         
+        private readonly EventbriteService _eventbriteService = new EventbriteService();
         public ActionResult SessionsToVoteFor()
         {
             var model = new SubmittedSessionsViewModel()
@@ -39,10 +40,22 @@ namespace DevDevDev.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
             }
 
+            var validOrder = false;
+            var correctEmail = false;
+
+            if (FeatureFlags.ValiateEventbriteVotes)
+            {
+                var order = _eventbriteService.GetOrder(orderNumber);
+                validOrder = order != null;
+                if (order != null)
+                {
+                    correctEmail = order.Email.ToLowerInvariant().Equals(orderEmail.ToLowerInvariant());
+                }
+            }
             var votes = new List<Vote>();
             for (var i = 0; i < EventConfig.TotalVotes; i++)
             {
-                votes.Add(new Vote(sessionIds[i], System.Web.HttpContext.Current.Request.UserHostAddress, orderNumber, orderEmail));
+                votes.Add(new Vote(sessionIds[i], System.Web.HttpContext.Current.Request.UserHostAddress, orderNumber, orderEmail, validOrder, correctEmail));
             }
 
             _voteService.AddVotes(votes);

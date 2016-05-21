@@ -205,6 +205,7 @@
     <Compile Include="Models\SubmittedSessionsViewModel.cs" />
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Models\SessionSubmission.cs" />
+    <Compile Include="Services\EventbriteService.cs" />
     <Compile Include="Services\SubmittedSessionsService.cs" />
     <Compile Include="Services\SessionSubmissionService.cs" />
     <Compile Include="Models\SessionSubmissionViewModel.cs" />
