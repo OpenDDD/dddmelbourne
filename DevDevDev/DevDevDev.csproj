@@ -197,6 +197,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ExtensionMethods.cs" />
+    <Compile Include="Infrastructure\FeatureFlags.cs" />
     <Compile Include="Infrastructure\ThrottleAttribute.cs" />
     <Compile Include="Models\EventConfig.cs" />
     <Compile Include="Models\VotingSubmissionViewModel.cs" />

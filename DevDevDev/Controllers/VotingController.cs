@@ -14,7 +14,12 @@ namespace DevDevDev.Controllers
         
         public ActionResult SessionsToVoteFor()
         {
-            return View();
+            var model = new SubmittedSessionsViewModel()
+            {
+                ValidateWithEventbrite = FeatureFlags.ValiateEventbriteVotes
+            };
+
+            return View(model);
         }
 
         [OutputCache(Duration = 3600)]

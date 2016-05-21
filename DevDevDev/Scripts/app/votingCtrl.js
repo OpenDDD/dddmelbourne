@@ -9,6 +9,7 @@ function votingCtrl($scope, $http) {
     $scope.submitUrl = $("#config").data("submit-votes-url");
     $scope.voteSuccessUrl = $("#config").data("voted-successfully-url");
     $scope.voteFailUrl = $("#config").data("voted-failure-url");
+    $scope.validateWithEventbrite = $("#config").data("validate-with-eventbrite");
     $scope.areWeSubmittingVotes = false;
     $scope.sessionsLoaded = false;
     $scope.showFull = false;
