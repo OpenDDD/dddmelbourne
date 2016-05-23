@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 using DevDevDev.Infrastructure;
 using DevDevDev.Models;
 using Microsoft.WindowsAzure.Storage.Table;
@@ -7,14 +9,13 @@ namespace DevDevDev.Services
 {
     public class SubmittedSessionsService : TableStorageServiceBase
     {
-
         private const string _sessionsTableName = "Sessions";
+        private static readonly Regex FirstInitial = new Regex(@"(\b[a-zA-Z])[a-zA-Z]* ");
 
         public SubmittedSessionsService()
             : base(_sessionsTableName)
         {
         }
-
 
         public VotingSessionsViewModel GetSessionsForVoting()
         {
@@ -30,16 +31,17 @@ namespace DevDevDev.Services
 
             foreach (var sessionSubmission in sessions)
             {
-                var session = new VotingSubmissionViewModel();
-
-                session.SessionId = sessionSubmission.RowKey;
-                session.SessionTitle = sessionSubmission.SessionTitle;
-                session.SessionAbstract = sessionSubmission.SessionAbstract.FormatForHtml();
-                session.PresenterName = sessionSubmission.PresenterName;
-                session.PresenterTwitterAlias = sessionSubmission.PresenterTwitterAlias;
-                session.PresenterWebsite = sessionSubmission.PresenterWebsite;
-                session.PresenterBio = sessionSubmission.PresenterBio;
-                session.RecommendedAudience = sessionSubmission.RecommendedAudience;
+                var session = new VotingSubmissionViewModel
+                {
+                    SessionId = sessionSubmission.RowKey,
+                    SessionTitle = sessionSubmission.SessionTitle,
+                    SessionAbstract = sessionSubmission.SessionAbstract.FormatForHtml(),
+                    PresenterName = AbbreviatePresenterName(sessionSubmission.PresenterName),
+                    PresenterTwitterAlias = sessionSubmission.PresenterTwitterAlias,
+                    PresenterWebsite = sessionSubmission.PresenterWebsite,
+                    PresenterBio = sessionSubmission.PresenterBio,
+                    RecommendedAudience = sessionSubmission.RecommendedAudience
+                };
 
                 viewModel.SessionsToVoteFor.Add(session);
 
@@ -63,7 +65,7 @@ namespace DevDevDev.Services
                 {
                     SessionTitle = sessionSubmission.SessionTitle,
                     SessionAbstract = sessionSubmission.SessionAbstract.FormatForHtml(),
-                    PresenterName = sessionSubmission.PresenterName,
+                    PresenterName = AbbreviatePresenterName(sessionSubmission.PresenterName),
                     PresenterTwitterAlias = sessionSubmission.PresenterTwitterAlias,
                     PresenterWebsite = sessionSubmission.PresenterWebsite,
                     PresenterBio = sessionSubmission.PresenterBio,
@@ -74,6 +76,19 @@ namespace DevDevDev.Services
 
             }
             return viewModel;
+        }
+
+        private static string AbbreviatePresenterName(string presenterName)
+        {
+            if (string.IsNullOrEmpty(presenterName))
+            {
+                return string.Empty;
+            }
+
+            var presenterNames = presenterName.Replace(", ", ",")
+                .Split(',').Select(presenter => FirstInitial.Replace(presenter, "$1. ")).ToList();
+
+            return string.Join(", ", presenterNames);
         }
     }
 }
