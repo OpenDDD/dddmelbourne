@@ -2,7 +2,6 @@
 @model DevDevDev.Models.SubmittedSessionsViewModel
 
 
-
 <div class="copy-block row">
     <div class="large-12 columns">
         <h4>Sessions</h4>
@@ -25,7 +24,7 @@
                 
                 @if (!String.IsNullOrWhiteSpace(session.PresenterTwitterAlias))
                 {
-                     <a href="http://www.twitter.com/@session.PresenterTwitterAlias" target="_blank">@@@session.PresenterTwitterAlias</a>
+                    <span>[<a href="http://www.twitter.com/@session.PresenterTwitterAlias" target="_blank">@@@session.PresenterTwitterAlias</a>]</span>
                 }
                
                 @if (!String.IsNullOrWhiteSpace(session.PresenterWebsite))
