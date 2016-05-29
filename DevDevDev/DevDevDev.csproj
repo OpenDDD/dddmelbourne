@@ -229,6 +229,7 @@
     <Content Include="Content\images\shawn.jpg" />
     <Content Include="Content\images\sponsor-buzzconf.png" />
     <Content Include="Content\images\sponsor-gooroo.png" />
+    <Content Include="Content\images\sponsor-liberty.png" />
     <Content Include="Content\images\sponsor-microsoft.png" />
     <Content Include="Content\images\sponsor-octopusdeploy.png" />
     <Content Include="Content\images\sponsor-pageup.png" />
