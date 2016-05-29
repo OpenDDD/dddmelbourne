@@ -70,6 +70,9 @@ header h2 {
   margin: 0 1em;
   position: relative;
 }
+.error {
+  text-align: center;
+}
 @media only screen and (max-width: 600px) {
   .status-row {
     text-align: center;
