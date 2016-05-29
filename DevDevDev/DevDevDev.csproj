@@ -224,6 +224,7 @@
     <Content Include="Content\images\andrew.jpg" />
     <Content Include="Content\images\brendan.jpg" />
     <Content Include="Content\images\john.jpg" />
+    <Content Include="Content\images\paul.jpg" />
     <Content Include="Content\images\shawn.jpg" />
     <Content Include="Content\images\sponsor-buzzconf.png" />
     <Content Include="Content\images\sponsor-gooroo.png" />
