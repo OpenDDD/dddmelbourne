@@ -45,13 +45,13 @@ namespace DevDevDev.Controllers
 
             if (FeatureFlags.ValiateEventbriteVotes)
             {
-                var order = _eventbriteService.GetOrder(orderNumber);
+                var order = _eventbriteService.GetOrder(orderNumber.Trim());
                 if (order != null)
                 {
                     validOrder = true;
                     if (!string.IsNullOrEmpty(order.Email))
                     {
-                        correctEmail = order.Email.ToLowerInvariant().Equals(orderEmail.ToLowerInvariant());
+                        correctEmail = order.Email.ToLowerInvariant().Equals(orderEmail.Trim().ToLowerInvariant());
                     }
                 }
             }
