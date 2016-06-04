@@ -97,7 +97,7 @@
                 <div ng-show="showFull || session.ShowDescription">
                     <p>
                         {{session.PresenterName}}
-                        <span>[<a href="http://www.twitter.com/{{session.PresenterTwitterAlias}}">{{session.PresenterTwitterAlias}}</a>]</span>
+                        <span ng-if="session.PresenterTwitterAlias">[<a href="http://www.twitter.com/{{session.PresenterTwitterAlias}}" target="_blank">{{session.PresenterTwitterAlias}}</a>]</span>
 
                         <br />
                         <a href="{{'http://' + session.PresenterWebsite}}">{{session.PresenterWebsite}}</a>
