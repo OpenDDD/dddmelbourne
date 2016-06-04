@@ -8,6 +8,7 @@ namespace DevDevDev.Models
     public class SubmittedSessionsViewModel
     {
         public List<SessionSubmissionViewModel> Sessions { get; set; }
+        public bool ValidateWithEventbrite { get; set; }
 
         public SubmittedSessionsViewModel()
         {

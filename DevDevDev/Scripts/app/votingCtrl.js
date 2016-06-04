@@ -9,6 +9,7 @@ function votingCtrl($scope, $http) {
     $scope.submitUrl = $("#config").data("submit-votes-url");
     $scope.voteSuccessUrl = $("#config").data("voted-successfully-url");
     $scope.voteFailUrl = $("#config").data("voted-failure-url");
+    $scope.validateWithEventbrite = $("#config").data("validate-with-eventbrite");
     $scope.areWeSubmittingVotes = false;
     $scope.sessionsLoaded = false;
     $scope.showFull = false;
@@ -43,27 +44,40 @@ function votingCtrl($scope, $http) {
          
     };
 
-    $scope.submit = function(sessionsToVoteFor) {
+    $scope.submit = function(sessionsToVoteFor, orderNumber, orderEmail) {
 
-      
+        var submissionModel = {};
+
+        if ($scope.validateWithEventbrite === "True") {
+            if (!orderNumber || !orderEmail) {
+                alert('You must enter an order number and email');
+                return;
+            }
+
+            submissionModel.orderNumber = orderNumber;
+            submissionModel.orderEmail = orderEmail;
+        }
 
         if ($scope.viewModel.TotalVotes !== 0) {
             alert('You still have ' + $scope.viewModel.TotalVotes + ' votes left!');
             return;
         }
 
-        var votes = [];
+        submissionModel.sessionIds = [];
 
         sessionsToVoteFor.forEach(function (session) {
            
             if (session.VotedFor)
-                votes.push(session.SessionId);
+                submissionModel.sessionIds.push(session.SessionId);
         });
+
 
 
         $scope.areWeSubmittingVotes = true;
 
-        $http({ method: 'POST', url: $scope.submitUrl, data: votes }).
+        
+
+        $http({ method: 'POST', url: $scope.submitUrl, data: submissionModel }).
 
          success(function (data, status) {
              window.location = $scope.voteSuccessUrl;
