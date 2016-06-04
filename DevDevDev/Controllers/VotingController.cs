@@ -11,11 +11,11 @@ namespace DevDevDev.Controllers
     {
         private readonly VoteService _voteService = new VoteService();
         private readonly SubmittedSessionsService _submittedSessionsService = new SubmittedSessionsService();
-        
         private readonly EventbriteService _eventbriteService = new EventbriteService();
+
         public ActionResult SessionsToVoteFor()
         {
-            var model = new SubmittedSessionsViewModel()
+            var model = new SubmittedSessionsViewModel
             {
                 ValidateWithEventbrite = FeatureFlags.ValiateEventbriteVotes
             };
@@ -46,12 +46,16 @@ namespace DevDevDev.Controllers
             if (FeatureFlags.ValiateEventbriteVotes)
             {
                 var order = _eventbriteService.GetOrder(orderNumber);
-                validOrder = order != null;
                 if (order != null)
                 {
-                    correctEmail = order.Email.ToLowerInvariant().Equals(orderEmail.ToLowerInvariant());
+                    validOrder = true;
+                    if (!string.IsNullOrEmpty(order.Email))
+                    {
+                        correctEmail = order.Email.ToLowerInvariant().Equals(orderEmail.ToLowerInvariant());
+                    }
                 }
             }
+
             var votes = new List<Vote>();
             for (var i = 0; i < EventConfig.TotalVotes; i++)
             {

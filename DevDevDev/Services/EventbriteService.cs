@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net;
-using System.Web;
+using DevDevDev.Models;
 using Newtonsoft.Json;
 
 namespace DevDevDev.Services
 {
-
-    public class EventbriteOrder
-    {
-        public string Id { get; set; }
-        public string Event_id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-    }
     public class EventbriteService
     {
         private const string EventbriteBaseUri = "https://www.eventbriteapi.com/v3/";
@@ -39,7 +29,7 @@ namespace DevDevDev.Services
                     return order.Event_id.ToLowerInvariant().Equals(_eventId.ToLowerInvariant()) ? order : null;
                 }
             }
-            catch (Exception e  )
+            catch (Exception)
             {
                 return null;
             }

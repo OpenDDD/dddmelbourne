@@ -23,7 +23,5 @@ namespace DevDevDev.Models
         public readonly DateTime SubmittedDateUtc;
         public int Status { get; set; }
         public string SubmitterIp { get; set; }
-
-
     }
 }
