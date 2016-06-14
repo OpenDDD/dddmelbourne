@@ -8,7 +8,7 @@ var ddd = (function() {
 
     if (mapView == null) return;
     
-	var latlng = new google.maps.LatLng(-37.822137,145.038916);
+    var latlng = new google.maps.LatLng(-37.8770097, 145.0420733);
 
 	var myOptions = {
 		zoom: 17,
