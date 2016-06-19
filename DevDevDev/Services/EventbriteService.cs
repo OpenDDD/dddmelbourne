@@ -17,6 +17,7 @@ namespace DevDevDev.Services
             _token = ConfigurationManager.AppSettings.Get("EventbriteApiAuthToken");
             _eventId = ConfigurationManager.AppSettings.Get("EventbriteEventId");
         }
+
         public EventbriteOrder GetOrder(string orderId)
         {
             try
@@ -24,9 +25,14 @@ namespace DevDevDev.Services
                 using (var client = new WebClient())
                 {
                     var orderInfo = client.DownloadString(string.Format("{0}orders/{1}?token={2}", EventbriteBaseUri, orderId, _token));
+                    var attendeesInfo = client.DownloadString(string.Format("{0}orders/{1}/attendees?token={2}", EventbriteBaseUri, orderId, _token));
+
                     var order = JsonConvert.DeserializeObject<EventbriteOrder>(orderInfo);
+                    var orderAttendees = JsonConvert.DeserializeObject<EventbriteOrder>(attendeesInfo);
+                    order.Attendees = orderAttendees.Attendees;
+
                     // we only care about a very specific event for this purpose.
-                    return order.Event_id.ToLowerInvariant().Equals(_eventId.ToLowerInvariant()) ? order : null;
+                    return order.Event_id.ToUpperInvariant().Equals(_eventId.ToUpperInvariant()) ? order : null;
                 }
             }
             catch (Exception)

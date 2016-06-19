@@ -200,6 +200,8 @@
     <Compile Include="Infrastructure\ExtensionMethods.cs" />
     <Compile Include="Infrastructure\FeatureFlags.cs" />
     <Compile Include="Infrastructure\ThrottleAttribute.cs" />
+    <Compile Include="Models\EventbriteOrderAttendee.cs" />
+    <Compile Include="Models\EventbriteOrderAttendeeProfile.cs" />
     <Compile Include="Models\EventConfig.cs" />
     <Compile Include="Models\VotingSubmissionViewModel.cs" />
     <Compile Include="Models\VotingSessionsViewModel.cs" />

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using DevDevDev.Infrastructure;
@@ -51,7 +52,17 @@ namespace DevDevDev.Controllers
                     validOrder = true;
                     if (!string.IsNullOrEmpty(order.Email))
                     {
-                        correctEmail = order.Email.ToLowerInvariant().Equals(orderEmail.Trim().ToLowerInvariant());
+                        correctEmail = order.Email.Trim().ToUpperInvariant().Equals(orderEmail.Trim().ToUpperInvariant());
+                    }
+
+                    if (correctEmail == false && order.Attendees != null && order.Attendees.Any())
+                    {
+                        correctEmail = order.Attendees.Any(attendee => 
+                            attendee != null && 
+                            attendee.Profile != null && 
+                            !string.IsNullOrEmpty(attendee.Profile.Email) && 
+                            attendee.Profile.Email.Trim().ToUpperInvariant()
+                                .Equals(orderEmail.Trim().ToUpperInvariant()));
                     }
                 }
             }
