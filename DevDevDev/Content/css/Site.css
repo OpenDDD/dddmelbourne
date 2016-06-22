@@ -168,7 +168,7 @@ tr td.highlight-session {
   background: #fcf8f4;
 }
 .agenda-row th.yellow-stream {
-  background: #e3d800;
+  background: #E3D800;
 }
 .agenda-row td.yellow-stream {
   background: #fffef2;
@@ -572,6 +572,22 @@ footer ul li {
   max-width: 100%;
   max-height: 100%;
 }
+.gold-sponsor span a.narrow,
+.silver-sponsor span a.narrow,
+.platinum-partner span a.narrow {
+  width: 200px;
+}
+.gold-sponsor span img,
+.silver-sponsor span img,
+.platinum-partner span img {
+  width: 116px;
+  top: -10px;
+}
+.gold-sponsor span small,
+.silver-sponsor span small,
+.platinum-partner span small {
+  color: #333;
+}
 .platinum-partner a {
   height: 160px;
   width: 100%;
@@ -617,4 +633,3 @@ div.votes-remaining div button {
 .faq p {
   overflow: hidden;
 }
-/*# sourceMappingURL=Site.css.map */
