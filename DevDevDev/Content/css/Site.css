@@ -173,6 +173,12 @@ tr td.highlight-session {
 .agenda-row td.yellow-stream {
   background: #fffef2;
 }
+.agenda-row th.purple-stream {
+  background: #9E55C0;
+}
+.agenda-row td.purple-stream {
+  background: #f7f1fa;
+}
 .agenda-row .key-row {
   height: 80px;
 }
@@ -197,7 +203,7 @@ tr td.highlight-session {
 }
 .agenda-row td {
   background: #FFF;
-  width: 20%;
+  width: 16%;
   border: 1px solid #DDD;
   line-height: 1.5;
 }

@@ -5,6 +5,7 @@
 @red-stream: #ad4a54;
 @orange-stream: #cd9152;
 @yellow-stream: #E3D800;
+@purple-stream: #9E55C0;
 
 body {
 	font-family: "Lato", sans-serif;
@@ -195,6 +196,12 @@ tr td.highlight-session{
     td.yellow-stream {
         background: lighten(@yellow-stream,53%);
     }
+    th.purple-stream {
+        background: @purple-stream;
+    }
+    td.purple-stream {
+        background: lighten(@purple-stream,42%);
+    }
 }
 
 .agenda-row .key-row {
@@ -224,7 +231,7 @@ tr td.highlight-session{
 }
 .agenda-row td {
 	background: #FFF;
-	width: 20%;
+	width: 16%;
 	border: 1px solid #DDD;
 	line-height: 1.5;
 }

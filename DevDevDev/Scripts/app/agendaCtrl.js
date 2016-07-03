@@ -6,245 +6,258 @@ angular.module('ddd');
 function agendaCtrl($scope) {
 
     $scope.rawSessions = [
-	{
-	    "SessionId": "1497f72a-48b8-4844-bd8a-bb3dc988bd5f",
-	    "SessionTitle": "Why React really is different",
-	    "SessionAbstract": "There has been a heap of talk about web frameworks recently, React is one which is particularly interesting.\r\u003cbr/\u003e\r\u003cbr/\u003eReact takes a very different approach to how you build and compose your javascript applications. After this session you will have a good understanding what React is, how it is different to other frameworks like Angular and Ember and the reasons you might want to give it a go.",
-	    "RecommendedAudience": "None",
-	    "PresenterName": "Jake Ginnivan",
-	    "PresenterTwitterAlias": "jakeginnivan",
-	    "PresenterWebsite": "jake.ginnivan.net",
-	    "PresenterBio": "Jake is a Microsoft MVP in .net and maintains a number of open source projects such as Shouldly, GitVersion and others."
-	},
-	{
-	    "SessionId": "64790a8b-9849-41f0-9a65-e46e4bea967a",
-	    "SessionTitle": "Agile and Azure: A match made in heaven!",
-	    "SessionAbstract": "We live in a constantly changing world; technology is advancing, borders are disappearing and competition is intensifying. The only way for an organization to survive is to respond to complex and unpredictable challenges by becoming more agile, competitive and able to respond to changing market dynamics. \r\u003cbr/\u003e\r\u003cbr/\u003eFor us in the software industry it\u0026#39;s both a blessing and a curse. On one hand it means more jobs for us and on the other hand it adds up pressure on us to get thing done rapidly.  This is where Agile and Azure come to the rescue. Agile removes the process and mindset obstacles and Cloud technologies such as Microsoft Azure overcome the infrastructure constraints; by combining these two mighty forces, we can alleviate the pain of change and get the most out of the new opportunities.",
-	    "RecommendedAudience": "32169",
-	    "PresenterName": "Sarah Tabrizi",
-	    "PresenterTwitterAlias": "sarah_tabrizi",
-	    "PresenterWebsite": null,
-	    "PresenterBio": "Sarah is a senior software developer, knowledge hub and certified Azure Solutions Architect. She enjoys learning new stuff and helping others expand their knowledge."
-	},
-	{
-	    "SessionId": "9528c415-ceff-4977-ac7e-9733b5969b8f",
-	    "SessionTitle": "Microservices: \u000blessons from the trenches",
-	    "SessionAbstract": "Lately there has been a fair bit of hype around microservices and that\u0026#39;s led a lot of teams towards this style of architecture. Microservices is awesome, when it\u0026#39;s done right; but there are many gotchas and oversights that could make the experience painful and in some cases a complete disaster. In this session I will talk about some of the lessons I\u0026#39;ve learnt in implementing microservices and distributed systems over the years.",
-	    "RecommendedAudience": "a bit of exposure to distributed architecture",
-	    "PresenterName": "Mehdi Khalili",
-	    "PresenterTwitterAlias": "mehdikhalili",
-	    "PresenterWebsite": "www.mehdi-khalili.com",
-	    "PresenterBio": "Mehdi is a Microsoft ASP.Net MVP, OSS lover and ThoughtWorks consultant. He implemented his first  distributed system back in 2000 in banking industry where the solution was distributed across many different networks, devices and services. Since then he\u0027s been involved in designing and implementing many distributed and scalable systems."
-	},
-	{
-	    "SessionId": "45418427-35c0-4192-bcb0-37762d3c23b8",
-	    "SessionTitle": "The Power of a Great API - the case for writing API-first applications",
-	    "SessionAbstract": "Good developers try to make their jobs as easy as possible. We know our application will evolve, so we try to make future changes as simple as possible by layering and decoupling our architecture up front. That\u0026#39;s great, but can we do more?\r\u003cbr/\u003e\r\u003cbr/\u003eIn this session, I\u0026#39;ll do my best to convince you that an API should be the most important part of your application. By focusing on the API first, you\u0026#39;ll reap huge benefits in support and bug fixing, and you\u0026#39;ll open your application up to nearly limitless new features with minimal effort.\r\u003cbr/\u003e\r\u003cbr/\u003eWe\u0026#39;ll look at some applications that expose great APIs, and what benefits they\u0026#39;ve seen as a result. We\u0026#39;ll examine the practicalities of an API-first design, and how to avoid some of the common pitfalls. Finally, we\u0026#39;ll put all this into practice and write a demo app - API first.",
-	    "RecommendedAudience": "Any developer",
-	    "PresenterName": "Damian Brady",
-	    "PresenterTwitterAlias": "damovisa",
-	    "PresenterWebsite": "www.damianbrady.com.au",
-	    "PresenterBio": "I’m a Microsoft MVP in Application Lifecycle Management and I work as a Solution Architect for Octopus Deploy. I’m also a co-author of Professional Team Foundation Server 2013 from Wiley. I run the Brisbane .Net User Group, and the annual DeveloperDeveloperDeveloper Brisbane conference. I spend a lot of time training teams on how to improve their software, be it through improving their agile process, devops, or code quality. I regularly speak at conferences, User Groups, and other events, but most of the time you’ll find me working on Octopus Deploy, or helping teams get the most out of their devops strategies."
-	},
-	{
-	    "SessionId": "0223d9e7-52b8-4ab0-b983-58d105865391",
-	    "SessionTitle": "What if everything you knew about code quality is wrong?",
-	    "SessionAbstract": "I have always been an avid fan of quality code. I read the Effective Java and Clean Code; I practiced TDD \u0026amp; pair programming.. I even got my entire team to do my code reviews to share learnings.. \r\u003cbr/\u003eUntil I was hired to build a throw-away product. Build a prototype that would completely change every few days, that was going to be thrown away after a few months. And we threw out all of the code quality rules. \r\u003cbr/\u003eWe coded like mad for about 3 month without any problems.. 3 months became 6.. and 9.. and 12.. and then came the dreaded question: \u0026quot;What would it take to put this into production?\u0026quot;.\r\u003cbr/\u003eTo our completely surprise when we took a look at the code we produced over the past year it was the best quality code we had written in our lives.. \r\u003cbr/\u003e\r\u003cbr/\u003eLooking back on that project I learned that we unconsciously followed another set of rules that allowed us to go much much faster and deliver much better code quality.",
-	    "RecommendedAudience": "Somewhat experienced devs..",
-	    "PresenterName": "Erwin van der Koogh",
-	    "PresenterTwitterAlias": "evanderkoogh",
-	    "PresenterWebsite": "21stcenturymba.com",
-	    "PresenterBio": "Developer, Architect, Management Consultant. I am comfortable at all layers of an organisation in every department. But technology is my first love and will always have a special place in my heart."
-	},
-	{
-	    "SessionId": "0fda50d4-e4f0-486e-a7c9-86d533eb7119",
-	    "SessionTitle": "Humans create, computers automate!",
-	    "SessionAbstract": "Humans create, computers automate! Every time you do a task more than a couple of times you’re wasting your time and are less creative and productive.  This applies to all parts of the software life cycle.  In this session you’ll see how there are tools and approaches across the software lifecycle that will reduce the amount of time you spend doing repetitive tasks.\r\u003cbr/\u003eYou can tune a process but you can’t tune a human!",
-	    "RecommendedAudience": "No pre reqs.",
-	    "PresenterName": "Philip Beadle",
-	    "PresenterTwitterAlias": null,
-	    "PresenterWebsite": null,
-	    "PresenterBio": "Long time developer, original dev of DotNetNuke, wrote a few books on development, been working in the Automation area for the last 5 years."
-	},
-	{
-	    "SessionId": "02eb17b9-cf94-4742-b425-ac14fd7bbb4e",
-	    "SessionTitle": "Microtesting: How We Set Fire To The Testing Pyramid While Ensuring Confidence",
-	    "SessionAbstract": "As seen at Yow! West.\r\u003cbr/\u003e\r\u003cbr/\u003eDo you want to write less tests for the same amount of confidence?\r\u003cbr/\u003e\r\u003cbr/\u003eDo you want to print out the testing pyramid on a dot matrix printer, take it outside and set fire to it?\r\u003cbr/\u003e\r\u003cbr/\u003eHow confident are you that you can survive the refactoring apocalypse without breaking your tests?\r\u003cbr/\u003e\r\u003cbr/\u003eAs consultants, my colleagues and I get to see how testing is performed across many different organisations and have a chance to experiment with different testing strategies across multiple projects. Through this experience, we have developed a pragmatic process for setting an initial testing strategy that is as simple as possible and iterating on that strategy over time to evolve it based on how it performs. We have also settled on a style of testing that has proved to be very effective at reducing testing effort while maintaining (or even improving) confidence from our tests.\r\u003cbr/\u003e\r\u003cbr/\u003eThis talk will focus on some of our learnings and we will cover the different types of testing and how they interact, breaking apart the usual practice of testing all applications in the same way, the mysterious relationship between speed and confidence, how we were able to throw away the testing pyramid (and watch it burnnnnn!!!) and a number of techniques that have worked well for us when testing our applications.",
-	    "RecommendedAudience": "Code samples in .NET, but applies to any language. Pretty high level talk.",
-	    "PresenterName": "Rob Moore & Matt Davies",
-	    "PresenterTwitterAlias": "robdmoore",
-	    "PresenterWebsite": "robdmoore.id.au",
-	    "PresenterBio": "Robert is a Principal Consultant with Readify and specialises in leading and mentoring software teams to deliver business value. He has had a range of experience working with organisations to introduce and/or improve the use of Agile, Lean and continuous delivery approaches and this is an area he is particularly passionate about. While Robert has experience in a range of technologies, he specialises in C#, ASP.NET and Windows Azure."
-	},
-	{
-	    "SessionId": "40043a1a-3053-422c-b074-a9c2f3f124e0",
-	    "SessionTitle": "Learn you a Skynet",
-	    "SessionAbstract": "So you\u0026#39;ve heard that Deep Learning Neural Networks are the new black. Problems that only a few years ago seemed unsolvable are now possible. But how did we get to this point, why do they work so well \u0026amp; why should you care? \r\u003cbr/\u003e\r\u003cbr/\u003eIn this session I\u0026#39;ll give you (at no extra charge):\r\u003cbr/\u003e- A history of Neural Networks.\r\u003cbr/\u003e- How different types of Neural Networks work (with code examples and next-to-no Maths!)\r\u003cbr/\u003e- What stopped their widespread use for over 15 years.\r\u003cbr/\u003e- Typical Deep Learning architectures.\r\u003cbr/\u003e- How NASA \u0026amp; Google are using Deep Learning in image searches.\r\u003cbr/\u003e\r\u003cbr/\u003eIf you\u0026#39;ve ever wondered how Neural Networks tick then look no further!",
-	    "RecommendedAudience": "No prereq needed - want to be accessible to anyone.",
-	    "PresenterName": "Nick Imrei",
-	    "PresenterTwitterAlias": null,
-	    "PresenterWebsite": null,
-	    "PresenterBio": "Nick Imrei is a developer with a passion for Data Science \u0026 all things Machine Learning. Over the years working in industries ranging from Banking \u0026 Finance, Predictive Analytics and even Game Design. \u003cbr/\u003e\u003cbr/\u003eHis thesis, \u0027Reinforcement learning in Real Time Strategy games\u0027 used Machine Learning and Artificial Life to derive AI strategies to beat bots and human players a cut-down version of Command \u0026 Conquer.\u003cbr/\u003e\u003cbr/\u003eAn entrepreneur (or rather \u0027want-repreneur\u0027) at heart, Nick\u0027s one wish is to make the day 30 hrs long to accommodate the 3 or more projects he usually has on the go at once. \u003cbr/\u003e\u003cbr/\u003eHe works as a Software Developer at Kiandra IT, who tolerate his bad jokes."
-	},
-	{
-	    "SessionId": "18dae88d-468c-4cd6-b1d2-e726069f9ac3",
-	    "SessionTitle": "NoSQL, which way to go?",
-	    "SessionAbstract": "DocumentDB, Mongo or RavenDB? If you are starting out on a new project and considering NoSQL database as an option, which one should you do choose? What if the option you choose today may not work out to be the best one for your needs? \r\u003cbr/\u003eCome and join us for this session, we will take you on a journey where we will explain each of these database on their merits and compare them and also share War stories.",
-	    "RecommendedAudience": "200",
-	    "PresenterName": "Himanshu Desai, Ahmed El-Harouny & Daniel Janczak",
-	    "PresenterTwitterAlias": null,
-	    "PresenterWebsite": null,
-	    "PresenterBio": "Three passionate Readifarians!"
-	},
-	{
-	    "SessionId": "0cdcf3d0-60a5-4ed9-af25-846819ff26da",
-	    "SessionTitle": "Win 10 IoT - Jumping into Windows Internet of Things development by using the Universal Windows Platform.",
-	    "SessionAbstract": "In this presentation, Chris Briggs will teach you how to jump head first into Windows Internet of Things (IoT) development by using the Universal Windows Platform (UWP), allowing developers to build one solution across Microsoft hardware platforms. \r\u003cbr/\u003e\r\u003cbr/\u003eYou will learn the basics of Windows Universal app development with a focus on building apps for devices running Windows 10 IoT Core, through to how to integrate the solution with Windows Azure. \r\u003cbr/\u003e\r\u003cbr/\u003eYou will see Chris build a simple Universal app, deploy it to Raspberry Pi 2, then expand upon the application to read input from sensors and finally establish communication with Azure. This will demonstrate how to take a simple \u0026quot;hello world\u0026quot; thing and make it a useful citizen of IoT. \r\u003cbr/\u003e\r\u003cbr/\u003eWindows IoT development using Universal apps will make it obvious that there is no better time as a .Net developer to jump into IoT!\r\u003cbr/\u003e\r\u003cbr/\u003eMore Information:\r\u003cbr/\u003e\r\u003cbr/\u003eTeaching Points\r\u003cbr/\u003e\r\u003cbr/\u003e•\tWhat you need to know about the breadboard and GPIO \r\u003cbr/\u003e•\tHow make the sensors sing \r\u003cbr/\u003e•\tHow to dance with Azure",
-	    "RecommendedAudience": "Comfortable with C#",
-	    "PresenterName": "Chris Briggs",
-	    "PresenterTwitterAlias": "ChrisBriggsy",
-	    "PresenterWebsite": "blog.chrisbriggsy.com",
-	    "PresenterBio": "Chris is a Senior Software Developer at SSW, passionate about IoT, Scrum, Security, Windows Universal Apps and Xamarin. All the Devs at SSW have been asking Chris, what he thinks the Internet of Things will mean for their day to day lives? It ranges from the impossible to the improbable, from automating  their coffee breaks, to telling them exactly when the next bus will arrive!\u003cbr/\u003e\u003cbr/\u003eHis previous experience in the Windows Mobile Application platform include: Working with the Brisbane Academic Development Community as the Microsoft representative. A highlight was developing a Windows Phone Application that was demonstrated to a number of large companies in Jarkata, under the new Colombo plan."
-	},
-	{
-	    "SessionId": "f594d576-3418-433c-8a34-4ffe9b0c6fc0",
-	    "SessionTitle": "Functional Programming for the Everyman",
-	    "SessionAbstract": "You’ve probably heard that “functional programming is the next big thing” and that modern imperative languages like C# and JavaScript are adopting features from functional programming. So how can you, as a developer living in a normal imperative code base, start taking advantage of functional programming from where you are now, without needing to throw yourself in the deep end and change languages?\r\u003cbr/\u003e\r\u003cbr/\u003eIn this talk we’ll take a look at functional programming libraries that already exist in .NET and JavaScript, such as LINQ/lodash and Rx/RxJS, and walk through practical examples of imperative code that could be written in a more functional style in order to produce more concise, readable and maintainable code.\r\u003cbr/\u003e\r\u003cbr/\u003eOnce you get a taste of functional programming, you won’t want to go back. :)",
-	    "RecommendedAudience": "C#/JavaScript developers",
-	    "PresenterName": "Daniel Chambers",
-	    "PresenterTwitterAlias": "danielchmbrs",
-	    "PresenterWebsite": "www.digitallycreated.net",
-	    "PresenterBio": "Daniel is a Senior Developer at Readify and a passionate enthusiast of functional programming. While his favourite language is F#, his day job involves writing C# and JavaScript on Azure, to which he brings a functional twist."
-	},
-	{
-	    "SessionId": "80403212-d020-4d50-805b-3f4a58b16710",
-	    "SessionTitle": "Designing Wonderful .NET APIs",
-	    "SessionAbstract": "There are .NET libraries that are complex to setup, hard to understand, difficult to debug, and impossible to extend. And then there are .NET libraries for the same task that wonderfully just work. Why do some libraries succeed where others fail?\r\u003cbr/\u003e\r\u003cbr/\u003eIn this session James will discuss what makes a well designed API, from high level design principles like The Pit of Success, The Wall of Complexity, and The Power of Sameness, to applying those concepts in low level .NET class design, with the goal of creating .NET libraries that developers love to use.",
-	    "RecommendedAudience": ".NET Developers",
-	    "PresenterName": "James Newton-King",
-	    "PresenterTwitterAlias": "JamesNK",
-	    "PresenterWebsite": "james.newtonking.com",
-	    "PresenterBio": "James Newton-King is a software developer from Wellington, New Zealand. He works for Intergen, a leading IT services company, where he spends his time building awesome web applications and making fun of SharePoint.\u003cbr/\u003e\u003cbr/\u003eJames is best known for creating Json.NET, one of .NET\u0027s most popular open source libraries with over 10 million downloads and used by Visual Studio, Azure, ASP.NET, SignalR, RavenDB and thousands of other .NET libraries."
-	},
-	{
-	    "SessionId": "321d7f4c-fb64-448d-a048-8494ba12bf89",
-	    "SessionTitle": "Running docker in production",
-	    "SessionAbstract": "So you\u0026#39;ve heard of docker before, you think you know why it\u0026#39;s useful, you may even have a dancing cat running inside a docker container as an experiment on your home PC.\r\u003cbr/\u003e\r\u003cbr/\u003eNow that you\u0026#39;ve decided it\u0026#39;s worth giving this a go, you now need to work out how to get it into production.\r\u003cbr/\u003e\r\u003cbr/\u003eHow do you configure Jenkins/bamboo/TeamCity to build this thing? What do you use to deploy it? In fact, where do you even deploy it to?\r\u003cbr/\u003e\r\u003cbr/\u003eFinally, what are the drawbacks to docker (if any?) and how do you work around some of the gotchas?\r\u003cbr/\u003e\r\u003cbr/\u003eIf you want to save yourself a load of time getting docker to production then this talk is for you.",
-	    "RecommendedAudience": "Basic understanding of what docker is, ideally been to another docker presentation at ddd",
-	    "PresenterName": "Martin Booth, Gabriel Weyer",
-	    "PresenterTwitterAlias": "gabrielweyer",
-	    "PresenterWebsite": null,
-	    "PresenterBio": "Martin Booth has been running docker in production at SEEK for the last few months\u003cbr/\u003e\u003cbr/\u003eGabriel Weyer is a Senior Developer at Readify"
-	},
-	{
-	    "SessionId": "68d2e438-694b-47d4-92d9-28ba910d45d7",
-	    "SessionTitle": "How to be the best developer in the world",
-	    "SessionAbstract": "At tech conferences we love talking about new technologies, new languages, new techniques. But will they make you a better programmer? Maybe. Maybe not. What do you need to learn to become greatest programmer you can possibly be? Come and find out.",
-	    "RecommendedAudience": "software developers, any level.",
-	    "PresenterName": "Lachlan Barclay",
-	    "PresenterTwitterAlias": "voiceofapollo",
-	    "PresenterWebsite": "lachlanbarclay.net",
-	    "PresenterBio": "Lachlan Barclay ( http://lachlanbarclay.net ) is a software developer from Melbourne who is passionate about great programming and great guitar playing! For the past 15 years he\u0027s been building web applications for companies all over the globe and building a few of his own mobile apps too. When he\u0027s not programming he\u0027s playing guitar in Melbourne\u0027s progessive rock band, Toehider."
-	},
-	{
-	    "SessionId": "f2f89129-85bd-4805-b3ff-f23377c32443",
-	    "SessionTitle": "Docker, Containers and... Cats!",
-	    "SessionAbstract": "Containers, docker, microservices... I am pretty sure I have heard those words before, they have been pretty hardcore lately...\r\u003cbr/\u003e\r\u003cbr/\u003eSo, this thing, \u0026quot;containers\u0026quot; what is all about? is it like a big box where you put things? would that run in Windows? is just another virtual machine? why is so \u0026quot;awesome\u0026quot;? can I fit a cat in a shoe box?\r\u003cbr/\u003e\r\u003cbr/\u003eI will try to explain all those questions in a simple language, about what are containers, what are they right now the sweet potato and why I should care and why in a few months you will probably be using them.\r\u003cbr/\u003e\r\u003cbr/\u003eVote for this and I promise a lot of cat pictures as well...",
-	    "RecommendedAudience": "100-400",
-	    "PresenterName": "Cristian Prieto",
-	    "PresenterTwitterAlias": "cprieto",
-	    "PresenterWebsite": "cprieto.com",
-	    "PresenterBio": "Cristian Prieto is a rad guy, he loves cats, software development and the mix of both. He has been so lucky to do things from unix kernel development to mobile applications (and web stuff) in his just 15 years of work. He loves to chat about compilers and debuggers and weird stuff with a beer."
-	},
     {
-        "SessionId": "2538ffc5-e783-4165-9c7c-0df148f251a6",
-        "SessionTitle": "Resilient architectures for the cloud",
-        "SessionAbstract": "The cloud is all about elasticity on demand and cost savings, which is great. But it is also massively multi-tenanted and built with commodity hardware - which means it is prone to failure. Does this mean you can\u0026#39;t use the cloud if you have many 9s in your SLA? Not necessarily. In this talk, Microsoft Azure MVP and seasoned Architect Mahesh Krishnan will talk about how you go about creating applications that run on the cloud that are resilient to failure, and what you - as an architect and developer - need to do to ensure that your application can absorb failure and be resilient.\r\u003cbr/\u003e\u0026#160;\r\u003cbr/\u003eMahesh will not only provide guidance on building fail-safe applications but show you an example of an application that keeps on working even in the event of a single DC wide outage - watch him as he takes one component after another offline while the app continues to work.",
-        "RecommendedAudience": "Level 200",
-        "PresenterName": "Mahesh Krishnan",
-        "PresenterTwitterAlias": "maheshkrishnan",
-        "PresenterWebsite": "mahe.sh/",
-        "PresenterBio": "Mahesh is an author, speaker and Microsoft MVP. He works at Readify and has architected large cloud applications. He is very passionate about cloud and architecture, and speaks regularly about them at both local and international conferences."
+        "SessionId": "1497f72a-48b8-4844-bd8a-bb3dc988bd5f",
+        "PresenterName": "Pratik Khasnabis",
+        "PresenterTwitterAlias": "softveda",
+        "RecommendedAudience": "C#",
+        "SessionAbstract": "While C# 6 is being out for a while not all developers know some of the cool language features that got introduced in C# 6. Know about string interpolation, null conditional operator, nameof operator, expression bodied members and more that will help you to write more clear, correct and succint code. Then he talk moves on to see what is in store for C# 7. Here we will find nested local functions, tuple return types, pattern matching etc. Includes live code demo on Visual Studio \"15\" preview to explore the features.",
+        "SessionTitle": "Recapping C# 6 and a first look into C# 7",
+        "PresenterWebsite": null
     },
     {
-        "SessionId": "209edccc-efd1-4469-8493-a78e448b04e0",
-        "SessionTitle": "10+ unusual tips \u0026 tricks for .NET",
-        "SessionAbstract": "In this talk, we’ll highlight at least 10 less well known features of .NET. \r\u003cbr/\u003e\r\u003cbr/\u003eFeatures that may not be used by most developers very often. But if you know they’re available, then it’s good to know that they’re sitting in your toolbox, ready for action!",
-        "RecommendedAudience": "300 - Experience with .NET",
-        "PresenterName": "David Gardiner",
-        "PresenterTwitterAlias": "davidrgardiner",
-        "PresenterWebsite": "david.gardiner.net.au",
-        "PresenterBio": "David Gardiner has been creating software for over 20 years and has a passion for continual learning and improving quality. He helps run the Adelaide .NET User Group and works as a Senior Software Developer at RL Solutions on healthcare software."
+        "SessionId": "64790a8b-9849-41f0-9a65-e46e4bea967a",
+        "PresenterName": "Mohammad Helmy",
+        "PresenterTwitterAlias": "moahelmy",
+        "RecommendedAudience": "A bit of knowledge about Angular and/or ReactJs will be good but not required.",
+        "SessionAbstract": "Understanding the philosophy, design patterns and concepts behind building any framework helps programmers to get the most of it. Also, it introduces new vision about how to build software. <br />In this session, we'll try to understand the vision behind building ReactJS and how it can adapt our way of thinking how to build software. We'll try to understand what is ReactJs and what it is not. <br />It would be interesting to apply ReactJS philosophy while using other frameworks, Angular 2.0 for example and see how it will go.",
+        "SessionTitle": "Thinking in React",
+        "PresenterWebsite": null
     },
     {
-        "SessionId": "keynote",
-        "SessionTitle": "Consuming REST APIs, for all interpretations of REST",
-        "SessionAbstract": "There is a growing API economy. Almost every software business is either starting to consume APIs or produce APIs for others to consume. When it comes to building APIs, REST has won the popularity contest, but from a technical perspective the term has little meaning. Everyone has their own interpretation. This talk will discuss how to efficiently consume an API whether it is the simplest list of HTTP endpoints with JSON payloads, or hypermedia driven using bleeding edge, content negotiated, media types. We will talk about how to build re-usable and resilient client code that can insulate your client application from the dreaded V2 API. You will hear lots of practical guidance and insight that is not commonly discussed. Whether you are new to REST or an experienced practitioner, I believe you will leave this talk with some fresh perspectives on the subject.",
-        "RecommendedAudience": "Anyone",
-        "PresenterName": "Darrel Miller",
-        "PresenterTwitterAlias": "darrel_miller",
-        "PresenterWebsite": "bizcoder.com",
-        "PresenterBio": "Darrel has been building distributed business applications on the Microsoft platform for more than 20 years. He is an active member of the .NET community and OSS contributor. When he’s not reading IETF specifications in order to answer Stack Overflow questions, or writing tooling to help people build hypermedia driven client applications, you will find him enjoying time with his wife and daughter in Montreal, Quebec. Darrel works as a developer advocate at Runscope ensuring the best support possible to .NET developers who are building and consuming Web APIs. Darrel was a member of the Microsoft Web API advisory board, is now an Azure Advisor, a Microsoft Integration MVP and co-authored the O'Reilly book, Designing Evolvable Web APIs with ASP.NET."
+        "SessionId": "9528c415-ceff-4977-ac7e-9733b5969b8f",
+        "PresenterName": "Norman Noble",
+        "PresenterTwitterAlias": "inormannoble",
+        "RecommendedAudience": "No prior knowledge of NLP or ML required. Basic programming in node will do fine.",
+        "SessionAbstract": "Chat tools have become an important part of our daily lives. Whether it’s Messenger, WhatsApp, Slack or Skype we all use some sort of chat tool to communicate with each other on a regular basis. This has paved the way for a new type of application that isn’t a desktop, web or mobile. It’s an program that lives in your chat platform and communicates with you conversationally. In this talk I will demonstrate creating a conversational user interfaced program that lives in Slack and will use Natural Language Processing and Machine Learning to work out what you are asking it to do and act accordingly. I will demonstrate how this can create a low friction interface that can automate mundane or complex tasks and make it feel like you are asking a colleague to help you out. This could change the conceptual relationship we have with programs and open new possibilities in terms of interaction and user experience.",
+        "SessionTitle": "Building a conversational user interface",
+        "PresenterWebsite": "www.normannoble.io"
     },
     {
-        "SessionId": "locknote",
-        "SessionTitle": "The story of Octopus Deploy",
-        "SessionAbstract": "In 2011, while stuck in a meeting, I started hacking on an idea. The idea became a prototype, and then a product. It is now used by thousands of customers around the world, and employs 8 people. \u003cbr/\u003e\u003cbr/\u003eIn this presentation, I'll take you through the short history of Octopus Deploy, and where we are going. I'll also share some of the lessons we've learnt, and mistakes we've made, along our journey building software that is installed on-premises by thousands of customers in different environments. I'll discuss how building software as an ISV is fundamentally different to Enterprise software, and tools and approaches that you might use if you decide to start your own product company.",
-        "RecommendedAudience": "Anyone",
-        "PresenterName": "Paul Stovell",
-        "PresenterTwitterAlias": "paulstovell",
-        "PresenterWebsite": "paulstovell.com",
-        "PresenterBio": "Paul Stovell is the founder of Octopus Deploy, an automated deployment tool for .NET developers. Paul started Octopus in 2011 as an attempt to help himself and other developers to more reliably and easily deploy software to production. Since then, Octopus has grown up and now helps over 2000 customers around the world to automate their deployments. Prior to Octopus, Paul worked for an investment bank in London, and in Australia for Readify, a .NET consulting firm. Paul was a Microsoft MVP from 2006 to 2014, although lately he's seen the light."
+        "SessionId": "aacb8c41-19ff-4062-abc2-5798e9649663",
+        "PresenterName": "Erwin van der Koogh",
+        "PresenterTwitterAlias": "evanderkoogh",
+        "RecommendedAudience": "Intermediate",
+        "SessionAbstract": "What is this #serverless thing people keep talking about? <br />Creating the server infrastructure for your applications is more than hard enough, but keeping it all running is much harder still. What if we could do away with all this headache? <br />Amazon Webservices has been developing their platform at breakneck speed, but it wasn't until the introduction of AWS Lambda that we had the last piece of the puzzle to get rid of managing servers entirely. <br />We will discuss a real world serverless application and show how AWS Lambda makes it very easy to integrate AWS hosted solutions like API Gateway, DynamoDB, S3, Cloudfront, Simple Queueing Service and Simple Email Service into an almost infinitely scalable application without monitoring headaches.",
+        "SessionTitle": "Look Mom! No Servers!",
+        "PresenterWebsite": null
     },
+
     {
         "SessionId": "workshop-1",
-        "SessionTitle": "NodeBots - Using JavaScript to build connected hardware",
-        "SessionAbstract": "Besides being able to build robots, the NodeBots framework is really an abstraction of common hardware in JavaScript - providing us a ultitude of sensors, actuators and boards to create physical objects controlled by JS. Given how easy it is to use JS to glue systems and APIs together, this workshop will guide you through building your first internet connected \"thing\".\u003cbr/\u003e\u003cbr/\u003eThe session will comprise an introduction to the JS Hardware stack and then ensure your development environment is up and running. From there we'll look at consuming a common API and using information within it to actuate a physical object with LEDs or Servos.\u003cbr/\u003e\u003cbr/\u003eAfter that, we'll flip the perspective and look at how we can put sensors into the environment and then use JS to get and interpret data about our surroundings.\u003cbr/\u003e\u003cbr/\u003eThis session is aimed at those who have got a good JS background and have an interest in connected physical objects. Electronics skills are not assumed, there will be no soldering during the session and all kit will be provided.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003ePre requisites:\u003c/strong\u003e Clone the following repo \u003ca href=\"https://github.com/ajfisher/dddworkshop\" target=\"_blank\"\u003ehttps://github.com/ajfisher/dddworkshop\u003c/a\u003e, complete the instructions on \u003ca href=\"https://github.com/ajfisher/dddworkshop#installation\" target=\"_blank\"\u003ehttps://github.com/ajfisher/dddworkshop#installation\u003c/a\u003e and finally make sure you pull the latest changes the day before DDD.",
+        "PresenterName": "Aaron Powell",
+        "PresenterTwitterAlias": "slace",
         "RecommendedAudience": null,
-        "PresenterName": "Andrew Fisher",
-        "PresenterTwitterAlias": "ajfisher",
-        "PresenterWebsite": "ajfisher.me",
-        "PresenterBio": null
+        "SessionAbstract": "React is still hot property when it comes to web application development and in this workshop we'll beyond your component classes and modularisation and look into some deeper dive concepts like higher order components, automated testing and Redux.",
+        "SessionTitle": "Getting in deep with React",
+        "PresenterWebsite": "www.aaron-powell.com"
     },
     {
         "SessionId": "workshop-2",
-        "SessionTitle": "Hack Your API First",
-        "SessionAbstract": "Last year we did \"Hack Yourself First\", now it’s time to move on and start breaking our APIs. Let’s face it, they’re everywhere – behind our mobile devices, driving our [thing].js apps and increasingly running behind our internet of things. Web based APIs are enormously prevalent today and with this comes risks as well. Unfortunately, our APIs are frequently vulnerable to simple attacks, often because they’re \"hidden\" behind client interfaces. \u003cbr/\u003e\u003cbr/\u003eIn this workshop you’ll learn how to discover APIs behind rich client apps, intercept their communications and investigate how the app is communicating. You’ll learn how to go on the cyber-offence and hack your own APIs… before someone else does! You’ll need nothing more than common development tools so bring those along with your PC or Mac as well your mobile device of choice. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003ePre requisites:\u003c/strong\u003e Bring a laptop with either Fiddler or Charles Proxy depending on your OS of choice.",
+        "PresenterName": "Alexey Shcherbak & Reuben Bond",
+        "PresenterTwitterAlias": null,
         "RecommendedAudience": null,
-        "PresenterName": "Troy Hunt",
-        "PresenterTwitterAlias": "troyhunt",
-        "PresenterWebsite": "troyhunt.com",
-        "PresenterBio": null
+        "SessionAbstract": "You'll learn how to model and build your first app with virtual actors, host it on-prem or in a Cloud, yield the superpowers of distributed applications and make first steps to world domination. <br /><strong>Pre requisites:</strong> Clone the following repo https://github.com/centur/DDDMelb2016.VirtualActors, and make sure you pull the latest changes before DDD Melbourne.",
+        "SessionTitle": "Jumpstart into Virtual Actors with Orleans",
+        "PresenterWebsite": null
     },
     {
-        "SessionId": "workshop-3a",
-        "SessionTitle": "Git Fundamentals",
-        "SessionAbstract": "If you're brand new to Git, or just getting started, this is the workshop for you. We're going to walk through getting started with Git and learn some of the core commands that you need to be productive. No version control experience necessary. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003ePre requisites:\u003c/strong\u003e Bring a laptop with Git installed, so you can follow along.",
-        "RecommendedAudience": null,
-        "PresenterName": "Brendan Forster",
-        "PresenterTwitterAlias": "shiftkey",
-        "PresenterWebsite": "brendanforster.com",
-        "PresenterBio": null
+        "SessionId": "45418427-35c0-4192-bcb0-37762d3c23b8",
+        "PresenterName": "Justin Yoo",
+        "PresenterTwitterAlias": "justinchronicle",
+        "RecommendedAudience": "Bit of knowledge for REST API, node.js and C#",
+        "SessionAbstract": "Since AWS Lamba was unveiled in 2014, it was virtually the only option for cloud based serverless computing. Now, Azure Functions has been introduced in Build 2016, which is corresponding to AWS Lambda as a competitor. Both Azure Functions and AWS Lambda are event driven, compute-on-demand experience triggered by events occurring in virtually any cloud service as well as on-premises systems. <br /><br />In this session, I will briefly give a comparison with both services, show a demo how they work, especially writing in C# codes, and how to integrate it into your real world example.",
+        "SessionTitle": "Event Driven Cloud Computing: Azure Functions vs AWS Lambda",
+        "PresenterWebsite": "devkimchi.com"
     },
     {
-        "SessionId": "workshop-3b",
-        "SessionTitle": "The Zen of Git",
-        "SessionAbstract": "If you're familiar with Git and want to dig deeper, this is the workshop for you. We'll learn a bit about some advanced Git commands, as well as cover workflows for collaborating with others and perhaps some Git internals if time permits. \u003cbr/\u003e\u003cbr/\u003eNote: You can totally corner me at the after-party if you have specific Git questions you’d like to corner me about. Just as long as we talk about it over a beer. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003ePre requisites:\u003c/strong\u003e Bring a laptop with Git installed, so you can follow along. Have some local repositories to experiment with, as we may not have WiFi at the venue.",
+        "SessionId": "0223d9e7-52b8-4ab0-b983-58d105865391",
+        "PresenterName": "Basarat Ali Syed",
+        "PresenterTwitterAlias": "basarat",
+        "RecommendedAudience": "JavaScript enthusiasts",
+        "SessionAbstract": "You knew JavaScript two years ago? This session takes you through all the new shiny stuff in JavaScript Next. Also covers what's new in TypeScript Next (the transpiler of choice for using ESNext today).",
+        "SessionTitle": "ESNext and TSNext",
+        "PresenterWebsite": "basarat.com"
+    },
+    {
+        "SessionId": "0fda50d4-e4f0-486e-a7c9-86d533eb7119",
+        "PresenterName": "Damian Brady",
+        "PresenterTwitterAlias": "damovisa",
+        "RecommendedAudience": "~200 level. Anyone interested in the software deployment side of DevOps.",
+        "SessionAbstract": "You've toiled hard on your code, tested it locally, and you're confident it's ready to go. But how long until you see it in production? For some teams, it can be months or even years. By the time your new feature or bug fix gets used in anger, you've forgotten what you did! But with a great deployment pipeline and some clever architecture, there's a better way. <br /><br />This session is packed with war stories and real world successes. We'll walk through the realities of a no-touch deployment pipeline that you can trust all the way to production, and we'll examine some clever architectural patterns to enable true software agility. By the end, you'll be convinced that if it's not in production, it doesn't count. If you struggle to get updates in the hands of users, this is the session for you.",
+        "SessionTitle": "Deploying Straight to Production: A Guide to the Holy Grail",
+        "PresenterWebsite": "www.damianbrady.com.au"
+    },
+    {
+        "SessionId": "7bd812d4-a874-4d55-b6e2-ab45384dda53",
+        "PresenterName": "Daniel Chambers",
+        "PresenterTwitterAlias": "danielchmbrs",
+        "RecommendedAudience": "Functional Programmers. Interested Beginner -> Intermediate.",
+        "SessionAbstract": "Haskell is often dismissed as a language too academic for practical use in real-world production applications. However, as functional programming becomes more and more popular, and the benefits of static typing, purity and immutability become increasingly apparent, teams are looking for a language that exemplifies these traits; that language is Haskell. <br /><br />In this talk we'll take a look at one team's journey from working in F# on .NET into the world of shipping pure, immutable and fully-functional code written in Haskell straight into production on AWS. We'll cover the reasons why we chose Haskell, what advantages it brought us, and the challenges we overcame along our journey.",
+        "SessionTitle": "Haskell in Production - Not just a theory",
+        "PresenterWebsite": "www.digitallycreated.net"
+    },
+    {
+        "SessionId": "02eb17b9-cf94-4742-b425-ac14fd7bbb4e",
+        "PresenterName": "David Gardiner",
+        "PresenterTwitterAlias": "davidrgardiner",
+        "RecommendedAudience": "Knowledge of basic unit testing and or familiarity with basic .NET/C# coding",
+        "SessionAbstract": "In this fast-paced talk we'll look at 10 really useful libraries and tools that can make writing unit tests faster, simplify reading and understanding test code and better help identify the root cause of failed tests. <br /><br />A great mix of general and special purpose libraries to have in your unit testing toolbox.",
+        "SessionTitle": "10 tools and libraries to enhance .NET Unit Testing",
+        "PresenterWebsite": "david.gardiner.net.au"
+    },
+    {
+        "SessionId": "40043a1a-3053-422c-b074-a9c2f3f124e0",
+        "PresenterName": "Aaron Powell",
+        "PresenterTwitterAlias": "slace",
+        "RecommendedAudience": "Intermidiate",
+        "SessionAbstract": "Redux has grown in popularity within the React community as an alternative to Flux and a powerful way to manage within your application. From its focus on immutability, pure functions or time traveling, it's become a popular way to back your React applications. <br /><br />But Redux is more than a React library, it's a powerful pattern for data management in any kind of application. <br /><br />In this session we're going to dive deeply into how Redux works, look at why it's so popular with React, how it can work with any front-end framework and even beyond JavaScript.",
+        "SessionTitle": "Redux, beyond React",
+        "PresenterWebsite": "www.aaron-powell.com"
+    },
+    {
+        "SessionId": "18dae88d-468c-4cd6-b1d2-e726069f9ac3",
+        "PresenterName": "Mahesh Krishnan",
+        "PresenterTwitterAlias": "maheshkrishnan",
+        "RecommendedAudience": "Developers, Developers, Developers",
+        "SessionAbstract": "In the eyes of a lot of people, \"the stereotypical developer\" is an introvert, who spends all of his or her time in front of a computer, communicates poorly, is socially awkward, unreliable, wears esoteric T-shirts and has an addiction to caffeine. <br /><br />Of course, this is not (all) true, but as developers our coding skills far outweigh our \"soft\" skills. So, what do we, as developers, need to do to improve on these skills? <br /><br />Mahesh Krishnan, draws upon his years of experience as a developer and consultant to talk about these skills, and what you need to do to get them. He will provide you with tools and tips to help you with your confidence, communication skills, time management skills, how to resolve conflict, etc; and also what you need to do to advance both your technical and leadership skills.",
+        "SessionTitle": "Soft skills for the developer",
+        "PresenterWebsite": "mahe.sh"
+    },
+    {
+        "SessionId": "0cdcf3d0-60a5-4ed9-af25-846819ff26da",
+        "PresenterName": "Jorge Arteiro",
+        "PresenterTwitterAlias": "jorgearteiro",
+        "RecommendedAudience": "Developers, DevOps and Operations with at least basic level of development.",
+        "SessionAbstract": "Microsoft just released a windows 10 insider version allowing Hyper-V Containers on Windows 10 desktops. <br /><br />Learn how you can use Docker and Hyper-V containers, to develop and ship containerized applications today!",
+        "SessionTitle": "\"Native Containers on Windows 10 using docker\" - a game changer for developers",
+        "PresenterWebsite": "azuretar.com"
+    },
+    {
+        "SessionId": "f594d576-3418-433c-8a34-4ffe9b0c6fc0",
+        "PresenterName": "Igor Gorelik",
+        "PresenterTwitterAlias": "rogik",
+        "RecommendedAudience": "It's 101 level session - no prior knowledge is required",
+        "SessionAbstract": "All of us play games. Some games are very complex (e.g. Hallo, Call of Duty, etc.) and some are not. Even though the game creation seems like a very complex task , with Unity3D and C# it’s not that hard. I will demonstrate it through number of examples and hope it will wake up your inner game developer.",
+        "SessionTitle": "Making games 101",
+        "PresenterWebsite": null
+    },
+    {
+        "SessionId": "f85d9187-5132-4c51-af7e-9e896585ad2d",
+        "PresenterName": "Carl Belle",
+        "PresenterTwitterAlias": null,
+        "RecommendedAudience": "I'd say mainly programmers with decent OO fundamentals and perhaps a bit of an understanding of pre-calculus maths (non-essential).",
+        "SessionAbstract": "Many great resources exist for those who wish to understand quantum computing, however nearly all these resources fail to cater to the novice. Many resources simply assume that the reader is already proficient with both linear and matrix algebra, as well as intrinsically understand how a quantum system should function. These resources are all well and good, and probably provide a great deal of insight to those equipped to digest them (physicists, mathematicians), but for the rest of us, they appear dense and impenetrable. <br /><br />How can you begin to understand something this complex in the first instance? <br /><br />What is needed is an introduction to the introduction, some bridging information that illustrates these concepts in 'normal' language, and allows the reader to go from ‘Novice’ to ‘Somewhat Prepared’. Join me to get the skinny on quantum computing and quantum information fundamentals, as seen from an OO perspective.",
+        "SessionTitle": "Quantum Computing fundamentals via OO",
+        "PresenterWebsite": "www.eliasdigital.com"
+    },
+    {
+        "SessionId": "80403212-d020-4d50-805b-3f4a58b16710",
+        "PresenterName": "William Tulloch",
+        "PresenterTwitterAlias": "wtulloch",
+        "RecommendedAudience": "level 200",
+        "SessionAbstract": "The actor/model has, of late, become the pattern du jour. In the .NET world the two most cited implementations are AKKA.NET and Orleans. In this talk we look at how these two compare; strength and weaknesses, similarities and differences. Is one better than the other or does it just depend on the right tool for the job?.",
+        "SessionTitle": "The Actor/Model pattern in .NET: Akka.Net vs Orleans for the curious",
+        "PresenterWebsite": null
+    },
+    {
+        "SessionId": "f2f89129-85bd-4805-b3ff-f23377c32443",
+        "PresenterName": "Ahmad Atighechi",
+        "PresenterTwitterAlias": "ahmad2x4",
+        "RecommendedAudience": "basic knowledge about web programming",
+        "SessionAbstract": "WebComponents is an in progress standard, by which you can teach good old HTML new tricks. Four different building blocks define Web Components, HTML Templates, Custom Elements, HTML Imports and Shadow DOM. Just like any other web standard different browsers implement the standard in different point of time, hence we polyfill to bridge today to the future. Since web components is future of web, different modern web framework/libraries take web components into consideration and provide some level of support for web components. In this session we will review current state of Web Components standard, different browser's support and also current polyfill for web components. We will also review today's big modern web frameworks like Angular 2.0 and Polymer to see how compatible they are with web components standard.",
+        "SessionTitle": "Web Components and modern web frameworks",
+        "PresenterWebsite": "www.ahmadreza.com"
+    },
+    {
+        "SessionId": "68d2e438-694b-47d4-92d9-28ba910d45d7",
+        "PresenterName": "Julian Berton",
+        "PresenterTwitterAlias": "julianberton",
+        "RecommendedAudience": "Technical people involved in building web applications",
+        "SessionAbstract": "Being able to think like a hacker is an important first step in designing and developing secure software. This talk will go through what motivates cyber criminals, how they can profit from attacking businesses and an overview of how an online, agile, devops, microservice architected, CD/CI, insert buzz word here company is approaching application security.",
+        "SessionTitle": "Thinking like a hacker",
+        "PresenterWebsite": "bertonjulian.github.io"
+    },
+    {
+        "SessionId": "e4756a6d-0ed9-47f9-b09a-a13bbd21b5ed",
+        "PresenterName": "JT",
+        "PresenterTwitterAlias": "jtango18",
+        "RecommendedAudience": "Anyone who has built software at some point.",
+        "SessionAbstract": "Objective-C is a heinous and ugly beast. It's a testament to the other advantages of the Apple ecosystem that anyone bothered to build apps with it at all. It seems that maybe Apple realised this and last year they announced their newest programming language for all their platforms: Swift. Is it any good though? Or is it just more of the NSSame? Come take a quick lap through some of the semantics, syntax and capabilities of Swift and additionally, see how they compare to language features in C#/.NET with a few nods to JavaScript along the way.",
+        "SessionTitle": "A Swift Lap for .NET Devs",
+        "PresenterWebsite": null
+    },
+    {
+        "SessionId": "workshop-3",
+        "PresenterName": "Shawn Wildermuth",
+        "PresenterTwitterAlias": "ShawnWildermuth",
         "RecommendedAudience": null,
-        "PresenterName": "Brendan Forster",
-        "PresenterTwitterAlias": "shiftkey",
-        "PresenterWebsite": "brendanforster.com",
-        "PresenterBio": null
+        "SessionAbstract": "ASP.NET Core is the newest web framework from Microsoft. Shawn has been teaching it since early betas. In this workshop, he'll walk you through how to build an application from scratch using ASP.NET Core. It will include coverage of MVC6, Entity Framework, Identity and Building a REST Service.",
+        "SessionTitle": "ASP.NET Core From Scratch",
+        "PresenterWebsite": "wildermuth.com"
     },
     {
         "SessionId": "workshop-4",
-        "SessionTitle": "Satisfying Movements - Animating the Web with CSS and JavaScript",
-        "SessionAbstract": "Web based animation has arrived, and it's time for you to start taking advantage of it to engage and delight your users. And in this session we'll see how. We'll cover CSS Transitions and Animations, and throw some 2D and 3D Transforms into the mix as well, to understand how today's most common, and eye catching, animated UI design patterns can quickly be implemented in all modern browsers and devices. \u003cbr/\u003e\u003cbr/\u003eWe'll also look at how you can control animations via JavaScript, respond to animation events, and address the thorny issue of making animations more performant, with less drain on your devices battery. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003ePre requisites:\u003c/strong\u003e Bring a laptop with your favourite web development tools and download the following file \u003ca href=\"http://bit.ly/1IrmIoh\" target=\"_blank\"\u003ehttp://bit.ly/1IrmIoh\u003c/a\u003e (4MB).",
+        "PresenterName": "Jeremy Clough",
+        "PresenterTwitterAlias": "jhbc",
         "RecommendedAudience": null,
-        "PresenterName": "John Allsopp",
-        "PresenterTwitterAlias": "johnallsopp",
-        "PresenterWebsite": "johnfallsopp.com",
-        "PresenterBio": null
+        "SessionAbstract": "Want confidence in your code but don't know how to escape the monotony of writing innumerable unit tests? Does refactoring fill you with a sense of dread when you realise the number of tests that will be impacted? Enter property based testing... <br /><br />Come along to learn how to test the properties of your code, and leave with a new level of confidence and satisfaction you never knew was possible.",
+        "SessionTitle": "Introduction to Property Based Testing (using F#)",
+        "PresenterWebsite": null
+    },
+    {
+        "SessionId": "321d7f4c-fb64-448d-a048-8494ba12bf89",
+        "PresenterName": "Abhaya Chauhan & Joshua Toth",
+        "PresenterTwitterAlias": null,
+        "RecommendedAudience": "No pre-req",
+        "SessionAbstract": "This talk is to discuss the lessons we learnt from our first microservice. It has been running in production just under a year (over 160 deployments) - looking back, we have scars, and we've learnt a lot - lets have a retro! <br /><br />We will cover all sorts of topics ranging from the technical details of our approach, in terms of technology stack, continuous deployments, our  journey with new technology, and even our big mistakes. We'll discuss what happened, and how we worked to fix them. <br /><br />A lot has been learnt, especially in terms of working with the Monolith, and we'd love to share. Something for everyone.",
+        "SessionTitle": "Microservice Scars",
+        "PresenterWebsite": "www.abhayachauhan.com"
+    },
+    {
+        "SessionId": "2538ffc5-e783-4165-9c7c-0df148f251a6",
+        "PresenterName": "John Bristowe",
+        "PresenterTwitterAlias": "johnbristowe",
+        "RecommendedAudience": "Must love code.",
+        "SessionAbstract": "NativeScript: great framework? Or, the greatest framework? You've heard how awesome it is, now see it in action! In this session, we'll build a native mobile app for iOS and Android from scratch. It will be epic.",
+        "SessionTitle": "Let's Build a Native Mobile App with NativeScript and Angular 2",
+        "PresenterWebsite": "bristowe.com"
+    },
+    {
+        "SessionId": "209edccc-efd1-4469-8493-a78e448b04e0",
+        "PresenterName": "Josh Price",
+        "PresenterTwitterAlias": "joshprice",
+        "RecommendedAudience": "Any developer who has ever produced or consumed a REST API",
+        "SessionAbstract": "What if you could simply declare your available data types and quickly publish a fluid, fast and self-documented API that isn't tied to HTTP, JSON or your choice of backend store? Sounds better than handcrafting a RESTful API right? <br /><br />Say hello to GraphQL, an exciting new REST alternative from Facebook which will help you build faster and easier to work with web APIs than ever before. <br /><br />We'll explore how to define your schemas, hook them up to your data and connect to them from your frontend clients. We'll also look at the future of GraphQL. You'll never look at REST APIs the same way again. Promise.",
+        "SessionTitle": "Better APIs with GraphQL",
+        "PresenterWebsite": "graphql-elixir.org"
+    },
+    {
+        "SessionId": "391c8b8a-b4b2-4b9f-8dac-493440c427c3",
+        "PresenterName": "Colin Scott",
+        "PresenterTwitterAlias": "abstractcode",
+        "RecommendedAudience": "Beginner to intermediate",
+        "SessionAbstract": "Everyone loves to talk themselves up in conference presentations, regaling you with tales of their technical brilliance. Sure these talks can be filled with valuable information about the latest technologies, but have you ever stopped to consider how it makes you, the audience, feel? After you've spent the weekend hearing about reactively programmed event sourced games running in the cloud isn't hard to go back to writing CRUD forms using ASP.NET WebForms 3.5 against an Access DB? Don't you want someone to stand up and tell you all the ways they've screwed up so you can feel better about the code that awaits you on Monday? <br /><br />This is that talk. <br /><br />It's taken Colin 17 years to learn these things through failures big and small. Now you can learn such classic mistakes as inappropriate layering, leaky abstractions, reimplementing perfectly valid frameworks because reasons, undervaluing the cost of development friction, and so much more. All this (probably, maybe) in just one session the length of which I did not bother to research. Yours to take away so you can laugh smugly at me when you fail to do so in your career*. Vote now but don't send any money. <br /><br />*offer void where prohibited",
+        "SessionTitle": "Random Failures of Architecture I Have Committed",
+        "PresenterWebsite": "abstractcode.com"
+    },
+    {
+        "SessionId": "keynote",
+        "PresenterName": "Paul Fenwick",
+        "PresenterTwitterAlias": "pjf",
+        "RecommendedAudience": null,
+        "SessionAbstract": "Technology is advancing at a faster rate than society's expectations, and can go from science-fiction to being consumer-available, with very little in the way of discussion in between, but the questions they raise are critically important: What happens when self-driving vehicles cause unemployment, when medical expert systems work on behalf of insurance agencies rather than patients, and weapon platforms make their own lethal decisions?",
+        "SessionTitle": "The Future is Awesome (and what you can do about it)",
+        "PresenterWebsite": "pjf.id.au"
+    },
+    {
+        "SessionId": "locknote",
+        "PresenterName": "Shawn Wildermuth",
+        "PresenterTwitterAlias": "ShawnWildermuth",
+        "RecommendedAudience": null,
+        "SessionAbstract": "As developers we spend a lot of time chasing technical skills like JavaScript, C++, and Angular. But the reality is that it the skills you have when you get a job are rarely the ones that you will use for your entire tenure. When I evaluate talent, I focus on the skills that don’t go well on a resume: communication, teamwork, estimation, and active listening. In this talk, I’ll delve into why these skills are crucial to being a great developer and how you acquire the skills.",
+        "SessionTitle": "Being a Better Developer: Learning Skills That Aren't On Your Resume",
+        "PresenterWebsite": "wildermuth.com"
     }];
 
     $scope.ShowDetail = false;
