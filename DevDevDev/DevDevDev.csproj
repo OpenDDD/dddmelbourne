@@ -257,6 +257,7 @@
     <Content Include="Content\images\sponsor-ssw.png" />
     <Content Include="Content\images\sponsor-telerik.png" />
     <Content Include="Content\images\sponsor-webjet.png" />
+    <Content Include="Content\images\sponsor-xamconsulting.png" />
     <Content Include="Content\images\sponsor-xero-large.png" />
     <Content Include="Content\images\train.png" />
     <Content Include="Content\images\tram.png" />
