@@ -20,6 +20,12 @@ namespace DevDevDev
             );
 
             routes.MapRoute(
+                name: "add-session",
+                url: "add-session",
+                defaults: new { controller = "Main", action = "AddSession", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "vote",
                 url: "vote",
                 defaults: new { controller = "Voting", action = "SessionsToVoteFor", id = UrlParameter.Optional }
