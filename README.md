@@ -1,4 +1,4 @@
-## Setup
+## Setup 
 The site runs on Windows Azure Websites and uses Azure table storage to persist talk submissions and votes.  
 
 The following Web.config AppSettings are required to run:  
