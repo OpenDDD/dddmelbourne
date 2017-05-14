@@ -227,6 +227,7 @@
     <Content Include="Content\css\Site.min.css">
       <DependentUpon>Site.less</DependentUpon>
     </Content>
+    <Content Include="Content\images\p.gif" />
     <Content Include="Content\images\andrew.jpg" />
     <Content Include="Content\images\brendan.jpg" />
     <Content Include="Content\images\john.jpg" />
@@ -386,7 +387,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
