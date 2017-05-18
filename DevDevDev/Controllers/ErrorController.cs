@@ -6,12 +6,12 @@ namespace DevDevDev.Controllers
     {
         public ActionResult Index()
         {
-            return View("Error");
+            return new RedirectResult("https://www.dddmelbourne.com/error/?");
         }
 
         public ActionResult NotFound()
         {
-            return View("NotFound");
+            return new RedirectResult("https://www.dddmelbourne.com/404/?");
         }
     }
 }
