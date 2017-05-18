@@ -11,7 +11,7 @@ namespace DevDevDev.Controllers
 
         public ActionResult NotFound()
         {
-            return new RedirectResult("https://www.dddmelbourne.com/404/?");
+            return new RedirectResult("https://www.dddmelbourne.com/404.html?");
         }
     }
 }
