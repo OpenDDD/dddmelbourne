@@ -32,6 +32,12 @@ namespace DevDevDev.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpOptions]
+        public ActionResult SubmitVote()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
+        }
+
         [Throttle(Name = "ThrottleVote", Message = "Request throttled", Seconds = 5)]
         [HttpPost]
         public ActionResult SubmitVote(string[] sessionIds, string orderNumber = "", string orderEmail = "")
